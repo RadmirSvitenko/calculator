@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="main" id="main">
+      <div class="wrapper">
+        <div class="wrapper__blind">
+          <time id="Time" onchange="getNowTimePhone()">Time</time>
+          <div style="width: 50%;"></div>
+          <img src="images/signal.png" alt="Connection">
+          <img src="images/wifi.png" alt="Wi-Fi">
+          <div class="wrapper__border-batary">
+            <p id="message-batary"></p>
+            <div class="wrapper__batary" id="bataryPhone" onchange="levelBatary()"></div>
+          </div>
+        </div>
+        <div id="calculate_container" class="calculate">
+
+          <h2 id="result_calculate" class="result">0</h2>
+        </div>
+        <button class="btn btn-gray" onclick="cleaning()">AC</button>
+        <button class="btn btn-gray" onclick="setSeparatorNumber('-')">+/-</button>
+        <button class="btn btn-gray" onclick="setOperator('%')">%</button>
+        <button class="btn btn-light" onclick="setOperator('/')">/</button>
+        <button class="btn" onclick="setNumber(7)">7</button>
+        <button class="btn" onclick="setNumber(8)">8</button>
+        <button class="btn" onclick="setNumber(9)">9</button>
+        <button class="btn btn-light" onclick="setOperator('*')">x</button>
+        <button class="btn" onclick="setNumber(4)">4</button>
+        <button class="btn" onclick="setNumber(5)">5</button>
+        <button class="btn" onclick="setNumber(6)">6</button>
+        <button class="btn btn-light" onclick="setOperator('-')">-</button>
+        <button class="btn" onclick="setNumber(1)">1</button>
+        <button class="btn" onclick="setNumber(2)">2</button>
+        <button class="btn" onclick="setNumber(3)">3</button>
+        <button class="btn btn-light" onclick="setOperator('+')">+</button>
+        <button class="btn btn-zero" onclick="setNumber(0)">0</button>
+        <button class="btn" onclick="setFloatNumber('.')">.</button>
+        <button class="btn btn-light" onclick="resulting()">=</button>
+
+      </div>
+
+      <script src="script.js"></script>
+  </body>
+
+</html>
+
+<!--  -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="calculator">
+        <div class="show">
+          <div class="states">
+            <span style="color: #fff">09:41:45</span>
+
+            <img src="images/states.jpg" alt="" />
+          </div>
+          <h1 id="result" class="result">0</h1>
+        </div>
+        <div class="inputs">
+          <button class="btn btn-light" onclick="clean()">AC</button>
+          <button class="btn btn-light">+-</button>
+          <button class="btn btn-light">%</button>
+          <button class="btn btn-yellow" onclick="setOperator('/')">/</button>
+          <button class="btn btn-dark" onclick="setNumber('7')">7</button>
+          <button class="btn btn-dark" onclick="setNumber('8')">8</button>
+          <button class="btn btn-dark" onclick="setNumber('9')">9</button>
+          <button class="btn btn-yellow" onclick="setOperator('*')">X</button>
+          <button class="btn btn-dark" onclick="setNumber('4')">4</button>
+          <button class="btn btn-dark" onclick="setNumber('5')">5</button>
+          <button class="btn btn-dark" onclick="setNumber('6')">6</button>
+          <button class="btn btn-yellow" onclick="setOperator('-')">-</button>
+          <button class="btn btn-dark" onclick="setNumber('1')">1</button>
+          <button class="btn btn-dark" onclick="setNumber('2')">2</button>
+          <button class="btn btn-dark" onclick="setNumber('3')">3</button>
+          <button class="btn btn-yellow" onclick="setOperator('+')">+</button>
+          <button class="btn btn-dark zero" onclick="setNumber('0')">0</button>
+          <button class="btn btn-dark">,</button>
+          <button class="btn btn-yellow" onclick="resulting()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html> -->
