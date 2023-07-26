@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="main" id="main">
+      <div class="wrapper">
+        <div class="wrapper__blind">
+          <time id="Time" onchange="getNowTimePhone()">Time</time>
+          <div style="width: 50%;"></div>
+          <img id="img_signal" src="images/signal4.svg" alt="Connection">
+          <img id="img_wifi" src="images/wifi4.svg" alt="Wi-Fi">
+          <div class="wrapper__border-batary">
+            <div class="wrapper__batary" id="bataryPhone" onchange="levelBatary()"></div>
+            <span id="message-batary">Perecent</span>
+          </div>
+        </div>
+        <div id="calculate_container" class="calculate">
+
+          <h2 id="result_calculate" class="result">0</h2>
+        </div>
+        <button class="btn btn-gray" onclick="cleaning()">AC</button>
+        <button class="btn btn-gray" onclick="setSeparatorNumber('-')">+/-</button>
+        <button class="btn btn-gray" onclick="setOperator('%')">%</button>
+        <button class="btn btn-light" onclick="setOperator('/')">/</button>
+        <button class="btn" onclick="setNumber(7)">7</button>
+        <button class="btn" onclick="setNumber(8)">8</button>
+        <button class="btn" onclick="setNumber(9)">9</button>
+        <button class="btn btn-light" onclick="setOperator('*')">x</button>
+        <button class="btn" onclick="setNumber(4)">4</button>
+        <button class="btn" onclick="setNumber(5)">5</button>
+        <button class="btn" onclick="setNumber(6)">6</button>
+        <button class="btn btn-light" onclick="setOperator('-')">-</button>
+        <button class="btn" onclick="setNumber(1)">1</button>
+        <button class="btn" onclick="setNumber(2)">2</button>
+        <button class="btn" onclick="setNumber(3)">3</button>
+        <button class="btn btn-light" onclick="setOperator('+')">+</button>
+        <button class="btn btn-zero" onclick="setNumber(0)">0</button>
+        <button class="btn" onclick="setFloatNumber('.')">.</button>
+        <button class="btn btn-light" onclick="resulting()">=</button>
+
+      </div>
+
+      <script src="script.js"></script>
+  </body>
+
+</html>
